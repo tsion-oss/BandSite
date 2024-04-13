@@ -1,0 +1,72 @@
+@import './partials/global';
+@import './partials/variables';
+
+
+
+@media (min-width: 320px) and (max-width: 767px){
+
+
+.main {
+    //Hero Section
+    &__hero{
+        position: relative;
+        background-image: url('/Assets/Images/hero-bio.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        padding: 0rem 3rem;
+
+        &--heading{
+           margin: 0;
+           color: $primary_color_white;
+           font-size: 2.7rem;
+        }
+        
+    }
+    &__hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(61, 61, 61, 0.183);
+        
+    }
+
+    //About Section
+    &__about{
+        padding: 0rem 1rem;
+
+        &--h2{
+            font-size: ;
+        }
+    }
+
+    //Gallery Section
+
+    &__gallery{
+        padding: 0rem 1rem;
+    }
+
+}
+
+.main img{
+    width: 100%;
+}   
+    
+}
+    
+//styles for tablets
+@media (min-width: 768px) and (max-width: 1279px) {
+       
+ }
+    
+//styles for tablets
+@media (min-width: 1280px) {
+        
+}
+    
+
