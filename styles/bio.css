@@ -1,1 +1,82 @@
-/*# sourceMappingURL=bio.css.map */
+/* Devices size*/
+/* type kit */
+/* Desktop and Tablets text styles */
+/* Mobile Text Styles */
+/* Colors */
+body {
+  margin: 0;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .header {
+    background-color: #323232;
+    width: 100vw;
+  }
+  .header__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0rem;
+    gap: 1rem;
+  }
+  .header__nav--img {
+    width: 40%;
+  }
+  .header__nav--list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    width: 70vw;
+    list-style: none;
+  }
+  .header__nav--link {
+    text-decoration: none;
+    color: #FAFAFA;
+    font-size: 1.3rem;
+    font-weight: 100;
+  }
+}
+/* Devices size*/
+/* type kit */
+/* Desktop and Tablets text styles */
+/* Mobile Text Styles */
+/* Colors */
+@media (min-width: 320px) and (max-width: 767px) {
+  .main__hero {
+    position: relative;
+    background-image: url("/Assets/Images/hero-bio.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: 0rem 3rem;
+  }
+  .main__hero--heading {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 2.7rem;
+  }
+  .main__hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(61, 61, 61, 0.183);
+  }
+  .main__about {
+    padding: 0rem 1rem;
+  }
+  .main__about--h2 {
+    font-size: 1.5rem;
+  }
+  .main__gallery {
+    padding: 0rem 1rem;
+  }
+  .main img {
+    width: 100%;
+  }
+}/*# sourceMappingURL=bio.css.map */

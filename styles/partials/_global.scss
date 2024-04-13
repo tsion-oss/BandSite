@@ -1,0 +1,58 @@
+@import './variables';
+
+
+
+body{
+    margin: 0;
+}
+
+
+
+//style for mobile
+@media (min-width: 320px) and (max-width: 767px){
+
+//header 
+.header{
+    background-color: $primary_color_black;
+    width: 100vw;
+    &__nav {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         padding: 1rem 0rem;
+         gap: 1rem;
+        &--img{
+            width: 40%;
+        }
+        &--list{
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            width: 70vw;
+            list-style: none;
+        }
+       
+        &--link{
+            text-decoration: none;
+            color: $secondary_color_white;
+            font-size: 1.3rem;
+            font-weight: 100;
+            
+        }
+        
+    }
+}
+
+
+}
+
+//styles for tablets
+@media (min-width: 768px) and (max-width: 1279px) {
+   
+}
+
+//styles for tablets
+@media (min-width: 1280px) {
+    
+}
