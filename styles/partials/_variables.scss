@@ -4,9 +4,23 @@
 /* type kit */
 
 // typeface & weights
-$avenir_next_regular: 400;
-$avenir_next_demi: 600;
-$avenir_next_bold: 700;
+@font-face {
+    font-family: 'Avenir Next Regular'; 
+    src: url('/Assets/Font/AvenirNextLTPro-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Avenir Next Demi';
+    src: url('/Assets/Font/AvenirNextLTPro-Demi.otf'); 
+    
+}
+
+@font-face {
+    font-family: 'Avenir Next Bold';
+    src: url('/Assets/Font/AvenirNextLTPro-Bold.otf'); 
+    
+}
+
 
 /* Desktop and Tablets text styles */
 
