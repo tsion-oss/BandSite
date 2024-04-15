@@ -23,7 +23,17 @@ body {
 @media (min-width: 320px) and (max-width: 767px) {
   .header {
     background-color: #323232;
-    width: 100vw;
+  }
+  .header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 7.9rem;
+    width: 50%;
+    height: 0.3rem;
+    background-color: #FFFFFF;
   }
   .header__nav {
     display: flex;
@@ -31,72 +41,81 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1rem 0rem;
-    gap: 1rem;
+    gap: 0.5rem;
   }
   .header__nav--img {
-    width: 40%;
+    width: 11rem;
   }
   .header__nav--list {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    width: 70vw;
+    width: 100%;
     list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   .header__nav--link {
     text-decoration: none;
     color: #FAFAFA;
     font-size: 1.3rem;
     font-weight: 100;
+    position: relative;
   }
-  .footer {
-    background-color: #323232;
+  .header__nav--link.active {
     color: #FFFFFF;
-    padding: 1rem;
-  }
-  .footer__touch--h1 {
-    font-family: "Avenir Next Demi", "sans serif";
-    font-size: 8vw;
-  }
-  .footer__touch div {
-    display: flex;
-    width: 40vw;
-    justify-content: space-between;
-    height: 4vh;
-  }
-  .footer__box {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    padding: 1.5rem 0rem 2.5rem 0rem;
-  }
-  .footer__second--h3 {
-    font-family: "Avenir Next Demi", "sans serif";
-    font-size: 4vw;
-  }
-  .footer__second--p {
-    font-size: 3.5vw;
-  }
-  .footer__copyright {
-    font-size: 3vw;
-  }
-  .footer__logo--img {
-    width: 36%;
+    position: relative;
   }
 }
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding: 1rem;
+}
+.footer__touch--h1 {
+  font-family: "Avenir Next Demi", "sans serif";
+  font-size: 700;
+}
+.footer__touch-links {
+  display: flex;
+  justify-content: space-between;
+  width: 7rem;
+}
+.footer__touch--logo--img {
+  display: none;
+}
+.footer__box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1.5rem 0rem 2.5rem 0rem;
+}
+.footer__second--h3 {
+  font-family: "Avenir Next Demi", "sans serif";
+  font-size: 1rem;
+}
+.footer__second--p {
+  font-size: 0.9rem;
+}
+.footer__copyright {
+  font-size: 0.5rem;
+}
+.footer__logo--img {
+  width: 36%;
+}
+
 @media (min-width: 768px) and (max-width: 1279px) {
   .header {
     background-color: #323232;
-    width: 100vw;
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
   }
   .header__nav {
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 3rem;
   }
   .header__nav--img {
-    width: 16%;
+    width: 11rem;
   }
   .header__nav--list {
     list-style: none;
@@ -108,55 +127,92 @@ body {
     color: #FAFAFA;
     font-size: 1.3rem;
     font-weight: 100;
+    position: relative;
+  }
+  .header__nav--link.active {
+    color: #FFFFFF;
+    position: relative;
+  }
+  .header__nav--link.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 4.3rem;
+    width: 100%;
+    height: 0.4rem;
+    background-color: #FFFFFF;
   }
   .footer {
     background-color: #323232;
     color: #FFFFFF;
-    padding: 1rem;
+    padding: 4rem;
   }
   .footer__touch--h1 {
     font-family: "Avenir Next Demi", "sans serif";
-    font-size: 8vw;
+    font-size: 1.8rem;
+  }
+  .footer__touch {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__touch--div {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    font-family: "Avenir Next Regular";
+  }
+  .footer__touch-links {
+    display: flex;
+    gap: 3rem;
+  }
+  .footer__touch--logo--img {
+    display: block;
+    width: 8rem;
   }
   .footer__touch div {
     display: flex;
-    width: 40vw;
+    justify-content: center;
+    align-items: center;
     justify-content: space-between;
     height: 4vh;
   }
   .footer__box {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     gap: 0.8rem;
     padding: 1.5rem 0rem 2.5rem 0rem;
   }
   .footer__second--h3 {
     font-family: "Avenir Next Demi", "sans serif";
-    font-size: 4vw;
+    font-size: 1rem;
   }
   .footer__second--p {
-    font-size: 3.5vw;
+    font-size: 1rem;
   }
   .footer__copyright {
-    font-size: 3vw;
+    font-size: 1rem;
   }
   .footer__logo--img {
-    width: 36%;
+    display: none;
+    width: 100%;
   }
 }
 @media (min-width: 1280px) {
   .header {
     background-color: #323232;
-    width: 100vw;
-    padding: 1rem 5rem;
+    padding: 2rem 10rem;
   }
   .header__nav {
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 3rem;
   }
   .header__nav--img {
-    width: 16%;
+    width: 11rem;
   }
   .header__nav--list {
     list-style: none;
@@ -168,6 +224,76 @@ body {
     color: #FAFAFA;
     font-size: 1.3rem;
     font-weight: 100;
+    position: relative;
+  }
+  .header__nav--link.active {
+    color: #FFFFFF;
+    position: relative;
+  }
+  .header__nav--link.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 4.3rem;
+    width: 100%;
+    height: 0.4rem;
+    background-color: #FFFFFF;
+  }
+  .footer {
+    background-color: #323232;
+    color: #FFFFFF;
+    padding: 4rem 10rem;
+  }
+  .footer__touch--h1 {
+    font-family: "Avenir Next Demi", "sans serif";
+    font-size: 3rem;
+  }
+  .footer__touch {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__touch--div {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    font-family: "Avenir Next Regular";
+  }
+  .footer__touch-links {
+    display: flex;
+    gap: 3rem;
+  }
+  .footer__touch--logo--img {
+    display: block;
+    width: 11rem;
+  }
+  .footer__touch div {
+    display: flex;
+    justify-content: flex-start;
+    gap: 6rem;
+    align-items: center;
+    height: 4vh;
+  }
+  .footer__box {
+    display: flex;
+    justify-content: flex-start;
+    gap: 7rem;
+    flex-direction: row;
+    padding: 1.5rem 0rem 2.5rem 0rem;
+  }
+  .footer__second--h3 {
+    font-family: "Avenir Next Demi", "sans serif";
+    font-size: 1.2rem;
+  }
+  .footer__second--p {
+    font-size: 1rem;
+  }
+  .footer__copyright {
+    font-size: 1.1rem;
+  }
+  .footer__logo--img {
+    display: none;
   }
 }
 /* Devices size*/
@@ -193,7 +319,7 @@ body {
     background-image: url("/Assets/Images/hero-bio.jpg");
     background-size: cover;
     background-position: center;
-    height: 50vh;
+    height: 45vh;
     display: flex;
     align-items: center;
     padding: 0rem 1rem;
@@ -201,7 +327,7 @@ body {
   .main__hero--heading {
     margin: 0;
     color: #FFFFFF;
-    font-size: 6.5vw;
+    font-size: 1.8rem;
     font-family: "Avenir Next Demi", "sans serif";
   }
   .main__hero::before {
@@ -217,8 +343,11 @@ body {
     padding: 2rem 1rem;
     background-color: #FAFAFA;
   }
+  .main__about--image {
+    width: 100%;
+  }
   .main__about--h2 {
-    font-size: 8vw;
+    font-size: 700;
     font-weight: bolder;
     font-family: "Avenir Next Demi";
     color: #323232;
@@ -226,15 +355,15 @@ body {
     padding-bottom: 1rem;
   }
   .main__about--desc1--h3 {
-    font-size: 4.5vw;
-    line-height: 7vw;
+    font-size: 1rem;
+    line-height: 1.5rem;
     font-weight: 700;
     font-family: "Avenir Next Demi";
     color: #323232;
   }
   .main__about--desc1--p {
-    font-size: 4.5vw;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     font-family: "Avenir Next Demi";
     color: #323232;
     margin: 0;
@@ -243,11 +372,11 @@ body {
     color: #000000;
   }
   .main__about--desc2--h2 {
-    font-size: 4.5vw;
+    font-size: 1rem;
   }
   .main__about--desc2--p {
-    font-size: 4vw;
-    line-height: 6vw;
+    font-size: 0.9rem;
+    line-height: 1.5;
     margin: 0;
   }
   .main__about--desc2--pad {
@@ -258,7 +387,7 @@ body {
     background-color: #E1E1E1;
   }
   .main__gallery--h2 {
-    font-size: 8vw;
+    font-size: 700;
     font-weight: bolder;
     font-family: "Avenir Next Demi";
     color: #323232;
@@ -267,8 +396,6 @@ body {
   }
   .main__gallery-img {
     padding: 0.5rem 0rem;
-  }
-  .main img {
     width: 100%;
   }
 }
@@ -278,10 +405,10 @@ body {
     background-image: url("/Assets/Images/hero-bio.jpg");
     background-size: cover;
     background-position: center;
-    height: 60vh;
+    height: 70vh;
     display: flex;
     align-items: center;
-    padding: 0rem 1rem;
+    padding: 0rem 4rem;
   }
   .main__hero--heading {
     margin: 0;
@@ -299,31 +426,32 @@ body {
     background-color: rgba(61, 61, 61, 0.183);
   }
   .main__about {
-    padding: 2rem 4rem;
+    padding: 4rem 4rem;
     background-color: #FAFAFA;
   }
   .main__about--h2 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: bolder;
     font-family: "Avenir Next Demi";
     color: #323232;
     margin: 0;
-    padding-bottom: 1rem;
+    padding-bottom: 4rem;
   }
   .main__about--image {
     height: 53vh;
+    width: 100%;
   }
   .main__about--desc1 {
     padding: 0rem 5rem;
   }
   .main__about--desc1--h3 {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     line-height: 3rem;
     font-family: "Avenir Next Demi";
     color: #323232;
   }
   .main__about--desc1--p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 3rem;
     font-family: "Avenir Next Demi";
     color: #323232;
@@ -338,12 +466,15 @@ body {
     gap: 2rem;
   }
   .main__about--desc2--h2 {
-    font-size: 4.5vw;
+    font-size: 2.5rem;
+    font-weight: 900;
   }
   .main__about--desc2--p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 2.4rem;
     margin: 0;
+    min-width: 18rem;
+    max-width: 30rem;
   }
   .main__about--desc2--pad {
     margin-bottom: 1.5rem;
@@ -352,8 +483,11 @@ body {
     padding: 2rem 4rem;
     background-color: #E1E1E1;
   }
+  .main__gallery-img {
+    width: 100%;
+  }
   .main__gallery--h2 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: bolder;
     font-family: "Avenir Next Demi";
     color: #323232;
@@ -366,9 +500,6 @@ body {
     gap: 1.5rem;
     padding: 2rem 0rem;
   }
-  .main img {
-    width: 100%;
-  }
 }
 @media (min-width: 1280px) {
   .main__hero {
@@ -376,15 +507,15 @@ body {
     background-image: url("/Assets/Images/hero-bio.jpg");
     background-size: cover;
     background-position: center;
-    height: 60vh;
+    height: 80vh;
     display: flex;
     align-items: center;
-    padding: 0rem 1rem;
+    padding: 0rem 10rem;
   }
   .main__hero--heading {
     margin: 0;
     color: #FFFFFF;
-    font-size: 6.5vw;
+    font-size: 4rem;
     font-family: "Avenir Next Demi", "sans serif";
   }
   .main__hero::before {
@@ -397,31 +528,32 @@ body {
     background-color: rgba(61, 61, 61, 0.183);
   }
   .main__about {
-    padding: 2rem 4rem;
+    padding: 4rem 10rem;
     background-color: #FAFAFA;
   }
   .main__about--h2 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: bolder;
     font-family: "Avenir Next Demi";
     color: #323232;
     margin: 0;
-    padding-bottom: 1rem;
+    padding-bottom: 4rem;
   }
   .main__about--image {
-    height: 53vh;
+    width: 100%;
+    height: 600px;
   }
   .main__about--desc1 {
-    padding: 0rem 5rem;
+    padding: 0rem 8rem;
   }
   .main__about--desc1--h3 {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     line-height: 3rem;
     font-family: "Avenir Next Demi";
     color: #323232;
   }
   .main__about--desc1--p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 3rem;
     font-family: "Avenir Next Demi";
     color: #323232;
@@ -429,17 +561,18 @@ body {
   }
   .main__about--desc2 {
     color: #000000;
-    padding: 0rem 5rem;
+    padding: 0rem 8rem;
   }
   .main__about--desc2-box {
     display: flex;
     gap: 2rem;
   }
   .main__about--desc2--h2 {
-    font-size: 4.5vw;
+    font-size: 2rem;
+    font-weight: 900;
   }
   .main__about--desc2--p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 2.4rem;
     margin: 0;
   }
@@ -447,11 +580,11 @@ body {
     margin-bottom: 1.5rem;
   }
   .main__gallery {
-    padding: 2rem 4rem;
+    padding: 2rem 10rem;
     background-color: #E1E1E1;
   }
   .main__gallery--h2 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: bolder;
     font-family: "Avenir Next Demi";
     color: #323232;

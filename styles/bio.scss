@@ -13,15 +13,16 @@
         background-image: url('/Assets/Images/hero-bio.jpg');
         background-size: cover;
         background-position: center;
-        height: 50vh;
+        height: 45vh;
         display: flex;
         align-items: center;
         padding: 0rem 1rem;
+    
 
         &--heading{
            margin: 0;
            color: $primary_color_white;
-           font-size: 6.5vw;
+           font-size: 1.8rem;
            font-family: 'Avenir Next Demi', 'sans serif';
         }
         
@@ -42,8 +43,12 @@
         padding: 2rem 1rem;
         background-color: $secondary_color_white;
     
+    
+        &--image{
+            width: 100%;
+        }
         &--h2{
-            font-size: 8vw;
+            font-size: $mobile_section_header_font_weight;
             font-weight: bolder; 
             font-family: 'Avenir Next Demi';   
             color: $primary_color_black;
@@ -51,15 +56,15 @@
             padding-bottom: 1rem;
         }
         &--desc1--h3{
-            font-size: 4.5vw;
-            line-height: 7vw;
+            font-size: 1rem;
+            line-height: 1.5rem;
             font-weight: $mobile_section_header_font_weight;
             font-family:  'Avenir Next Demi';
             color: $primary_color_black;
         }
         &--desc1--p {
-            font-size: 4.5vw;
-            line-height: 2rem;
+            font-size: 1rem;
+            line-height: 1.5rem;
             font-family:  'Avenir Next Demi';
             color: $primary_color_black;
             margin: 0;
@@ -68,11 +73,11 @@
             color: $secondary_color_darkBlack;
 
             &--h2{
-                font-size: 4.5vw;
+                font-size: 1rem;
             }
             &--p{
-                font-size: 4vw;
-                line-height: 6vw;
+                font-size: 0.9rem;
+                line-height: 1.5;
                 margin: 0;
 
                
@@ -90,7 +95,7 @@
         background-color: $secondary_color_gray;
 
         &--h2{
-            font-size: 8vw;
+            font-size: $mobile_section_header_font_weight;
             font-weight: bolder; 
             font-family: 'Avenir Next Demi';   
             color: $primary_color_black;
@@ -99,14 +104,13 @@
         }
         &-img{
             padding: 0.5rem 0rem;
+            width: 100%;
         }
     }
 
 }
 
-.main img{
-    width: 100%;
-}   
+  
     
 }
 
@@ -120,10 +124,10 @@
             background-image: url('/Assets/Images/hero-bio.jpg');
             background-size: cover;
             background-position: center;
-            height: 60vh;
+            height: 70vh;
             display: flex;
             align-items: center;
-            padding: 0rem 1rem;
+            padding: 0rem 4rem;
     
             &--heading{
                margin: 0;
@@ -146,31 +150,32 @@
     
         //About Section
         &__about{
-            padding: 2rem 4rem;
+            padding: 4rem 4rem;
             background-color: $secondary_color_white;
         
             &--h2{
-                font-size: 3.5rem;
+                font-size: 3.2rem;
                 font-weight: bolder; 
                 font-family: 'Avenir Next Demi';   
                 color: $primary_color_black;
                 margin: 0;
-                padding-bottom: 1rem;
+                padding-bottom: 4rem;
             }
             &--image{
                 height: 53vh;
+                width: 100%;
             }
             &--desc1{
                 padding: 0rem 5rem;
             }
             &--desc1--h3{
-                font-size: 2.2rem;
+                font-size: 2.1rem;
                 line-height: 3rem;
                 font-family:  'Avenir Next Demi';
                 color: $primary_color_black;
             }
             &--desc1--p {
-                font-size: 2rem;
+                font-size: 1.8rem;
                 line-height: 3rem;
                 font-family:  'Avenir Next Demi';
                 color: $primary_color_black;
@@ -187,12 +192,16 @@
                 
     
                 &--h2{
-                    font-size: 4.5vw;
+                    font-size: 2.5rem;
+                    font-weight: 900;
                 }
                 &--p{
-                    font-size: 1.4rem;
+                    font-size: 1.2rem;
                     line-height: 2.4rem;
                     margin: 0;
+                    min-width: 18rem;
+                    max-width: 30rem;
+                  
     
                    
                 }
@@ -208,8 +217,11 @@
             padding: 2rem 4rem;
             background-color: $secondary_color_gray;
     
+            &-img{
+                width: 100%;
+            }
             &--h2{
-                font-size: 3.5rem;
+                font-size: 3.2rem;
                 font-weight: bolder; 
                 font-family: 'Avenir Next Demi';   
                 color: $primary_color_black;
@@ -223,16 +235,11 @@
                 padding: 2rem 0rem;
         
             }
-            &-img{
-                
-            }
+           
         }
     
     }
-    
-    .main img{
-        width: 100%;
-    }     
+      
  }
     
 //styles for tablets
@@ -244,15 +251,15 @@
             background-image: url('/Assets/Images/hero-bio.jpg');
             background-size: cover;
             background-position: center;
-            height: 60vh;
+            height: 80vh;
             display: flex;
             align-items: center;
-            padding: 0rem 1rem;
+            padding: 0rem 10rem;
     
             &--heading{
                margin: 0;
                color: $primary_color_white;
-               font-size: 6.5vw;
+               font-size: 4rem;
                font-family: 'Avenir Next Demi', 'sans serif';
             }
             
@@ -270,31 +277,32 @@
     
         //About Section
         &__about{
-            padding: 2rem 4rem;
+            padding: 4rem 10rem;
             background-color: $secondary_color_white;
         
             &--h2{
-                font-size: 3.5rem;
+                font-size: 3.2rem;
                 font-weight: bolder; 
                 font-family: 'Avenir Next Demi';   
                 color: $primary_color_black;
                 margin: 0;
-                padding-bottom: 1rem;
+                padding-bottom: 4rem;
             }
             &--image{
-                height: 53vh;
+                width: 100%;
+                height: 600px;
             }
             &--desc1{
-                padding: 0rem 5rem;
+                padding: 0rem 8rem;
             }
             &--desc1--h3{
-                font-size: 2.2rem;
+                font-size: 2.1rem;
                 line-height: 3rem;
                 font-family:  'Avenir Next Demi';
                 color: $primary_color_black;
             }
             &--desc1--p {
-                font-size: 2rem;
+                font-size: 1.8rem;
                 line-height: 3rem;
                 font-family:  'Avenir Next Demi';
                 color: $primary_color_black;
@@ -302,7 +310,7 @@
             }
             &--desc2{
                 color: $secondary_color_darkBlack;
-                padding: 0rem 5rem;
+                padding: 0rem 8rem;
 
                 &-box{
                     display: flex;
@@ -311,12 +319,16 @@
                 
     
                 &--h2{
-                    font-size: 4.5vw;
+                    font-size: 2rem;
+                    font-weight: 900;
                 }
                 &--p{
-                    font-size: 1.4rem;
+                    font-size: 1.2rem;
                     line-height: 2.4rem;
                     margin: 0;
+                    // min-width: 18rem;
+                    // max-width: 30rem;
+                  
     
                    
                 }
@@ -329,11 +341,11 @@
         //Gallery Section
     
         &__gallery{
-            padding: 2rem 4rem;
+            padding: 2rem 10rem;
             background-color: $secondary_color_gray;
     
             &--h2{
-                font-size: 3.5rem;
+                font-size: 3.2rem;
                 font-weight: bolder; 
                 font-family: 'Avenir Next Demi';   
                 color: $primary_color_black;
@@ -347,16 +359,16 @@
                 padding: 2rem 0rem;
         
             }
-            &-img{
-                
-            }
+           
         }
     
     }
     
     .main img{
         width: 100%;
-    }     
+    }  
+    
+    
 }
     
 
