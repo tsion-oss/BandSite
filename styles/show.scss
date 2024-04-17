@@ -1,0 +1,21 @@
+main{
+    height: 100vh;
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+
+.main{
+   
+    .show__hero{
+        position: relative;
+        background-image: url('/Assets/Images/hero-shows.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 45vh;
+        display: flex;
+        align-items: center;
+        padding: 0rem 1rem;
+    }
+}
+
+}
