@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BandSite</title>
     <link rel="stylesheet" href="/styles/bio.css">
+   
 </head>
 <body>
     <header class="header">
@@ -19,9 +20,11 @@
         </nav>
     </header>
     <main class="main">
+        <!-- hero section  -->
         <section class="main__hero">
             <h1 class="main__hero--heading">The Bees Knees</h1>
         </section>
+        <!-- about section  -->
         <section class="main__about">
             <h2 class="main__about--h2">About the Musicians</h2>
             <div>
@@ -43,6 +46,7 @@
                 </div>
             </div>
         </section>
+        <!-- gallery section  -->
         <section class="main__gallery">
             <h2 class="main__gallery--h2">Photo Gallery</h2>
             <div class="main__gallery--div">
@@ -57,27 +61,35 @@
                 <img src="/Assets/Images/Photo-gallery-9.jpg" alt="photo gallery 9" class="main__gallery-img">
             </div>
         </section>
-        <section class="form-section">
-            <form class="form-section__form">
-                <label for="name">NAME</label>
-                <input type="text" id="name">
-                <label for="comment">COMMENT</label>
-                <textarea id="message" name="comment" placeholder="Add a new comment"></textarea>
-                <input type="submit">COMMENT</input>
+        <!-- form section -->
+        <section class="comment">
+            <h2 class="comment__join">Join the Conversation</h2>
+            <form class="comment__form">
+                <img src="/Assets/Images/Mohan-muruge.jpg" alt="avatar image" class="comment__avatar">
+                <div class="comment__box">
+                    <label for="name" class="comment__label">NAME</label>
+                    <input type="text" id="name" class="comment__input" name="name" placeholder="Enter your name" required>
+                    <label for="comment"  class="comment__label">COMMENT</label>
+                    <textarea id="message" name="comment" placeholder="Add a new comment" class="comment__textarea" required></textarea>
+                    <button type="submit" class="comment__submit">COMMENT</button>
+                </div>
             </form>
-            <div class="form-section__comments">
-                <div class="form-section__each-box">
-                    <img src="" alt="">
-                    <div class="form-section__inside-box">
-                        <div class="form-section__name--date">
-                            <h3 class="form-section__name--date-h3">Victor Pinto</h3>
-                            <p class="form-section__name--date-p">11/02/2023</p>
+            <div class="comments-list">
+               
+            </div>
+            <!-- <div class="card">
+                    <img src="" alt="card__avatar" class="card__comments-avatar">
+                    <div class="card__comment-content">
+                        <div class="card__comment-meta">
+                            <h3 class="card__comment--author">Victor Pinto</h3>
+                            <p class="card__comment-date">11/02/2023</p>
                         </div>
-                        <p class="form-section__inside-box-p">
+                    <p class="card__comment-text">
                             This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.</p>
                     </div>
-                </div>
-            </div>
+            </div> -->
+        
+         
         </section>
     </main>
     <footer class="footer">
@@ -121,5 +133,6 @@
         <a href="/index.html"><img src="/Assets/Logo/Logo-bandsite.svg" alt="" class="footer__logo--img"></a>
         <p class="footer__copyright">Copyright The Bees Knees © 2023 All Rights Reserved</p>
     </footer>
+    <script src="/scripts/index-page.js"></script>
 </body>
 </html>

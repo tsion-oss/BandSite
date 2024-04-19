@@ -1,21 +1,61 @@
+@import './partials/variables';
+@import './partials/typography';
+@import './partials/mixins';
+
 main{
     height: 100vh;
 }
 
+
 @media (min-width: 320px) and (max-width: 767px){
 
-.main{
-   
-    .show__hero{
+
+.show{
+
+    // hero section    
+    &__hero{
         position: relative;
         background-image: url('/Assets/Images/hero-shows.jpg');
         background-size: cover;
         background-position: center;
-        height: 45vh;
         display: flex;
-        align-items: center;
-        padding: 0rem 1rem;
+        flex-direction: column;
+        padding: 0rem 1rem 2rem 1rem;
+        color: white;
+    
+        @include hero-overlay;
     }
+    &__heading-tog{
+        z-index: 1;
+    }
+    &__h3,
+    &__h1{
+        padding-bottom: 1rem;
+        
+    }
+    &__iframe{
+        z-index: 1;
+    }
+    &__h3{
+       position: relative;
+       top: 1.2rem;
+       font-size: 1rem;
+    }
+    &__h1{
+        font-family: 'Avenir Next Demi';
+    }
+    
 }
+//shows section
+.shows{
+    padding: 0rem 1rem;
+    &-h2{
+        font-family: 'Avenir Next Demi';
+        color: $primary_color_black;
+        font-size: 1.6rem;
+    }
+ }
+   
 
 }
+

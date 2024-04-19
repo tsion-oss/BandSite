@@ -1,16 +1,68 @@
+/* Devices size*/
+/* Desktop and Tablets text styles */
+/* Mobile Text Styles */
+/* Colors */
+/* type kit */
+@font-face {
+  font-family: "Avenir Next Regular";
+  src: url("/Assets/Font/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: "Avenir Next Demi";
+  src: url("/Assets/Font/AvenirNextLTPro-Demi.otf");
+}
+@font-face {
+  font-family: "Avenir Next Bold";
+  src: url("/Assets/Font/AvenirNextLTPro-Bold.otf");
+}
 main {
   height: 100vh;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-  .main .show__hero {
+  .show__hero {
     position: relative;
     background-image: url("/Assets/Images/hero-shows.jpg");
     background-size: cover;
     background-position: center;
-    height: 45vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    padding: 0rem 1rem 2rem 1rem;
+    color: white;
+  }
+  .show__hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(61, 61, 61, 0.353);
+    z-index: 0;
+  }
+  .show__heading-tog {
+    z-index: 1;
+  }
+  .show__h3, .show__h1 {
+    padding-bottom: 1rem;
+  }
+  .show__iframe {
+    z-index: 1;
+  }
+  .show__h3 {
+    position: relative;
+    top: 1.2rem;
+    font-size: 1rem;
+  }
+  .show__h1 {
+    font-family: "Avenir Next Demi";
+  }
+  .shows {
     padding: 0rem 1rem;
+  }
+  .shows-h2 {
+    font-family: "Avenir Next Demi";
+    color: #323232;
+    font-size: 1.6rem;
   }
 }/*# sourceMappingURL=show.css.map */
