@@ -30,6 +30,8 @@ comments.forEach((comment) => {
 
 })
 
+
+
 function createCardElement(comment) {
 
 const cardElement = createElementWithClass('div', 'card')
@@ -107,12 +109,18 @@ form.addEventListener('submit', (event) => {
 
     //Create a new card element for the new comment and append it to the comments list
     const newCardElement = createCardElement(newObject)
-    commentsList.appendChild(newCardElement)
+    commentsList.prepend(newCardElement)
 
-    form.reset() 
-
-  
+    form.reset()   
 })
+
+//Function for the navbar link
+
+//Get the current page URL
+const currentPage = window.location.pathname
+
+
+
 
 
 //  <div class="card">

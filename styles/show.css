@@ -16,7 +16,7 @@
   src: url("/Assets/Font/AvenirNextLTPro-Bold.otf");
 }
 main {
-  height: 100vh;
+  height: auto;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -35,19 +35,35 @@ main {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100vw;
     height: 100%;
-    width: 100%;
-    background-color: rgba(61, 61, 61, 0.353);
+    background-color: rgba(99, 99, 99, 0.326);
+    z-index: 0;
+  }
+  .show__hero__heading-tog {
+    z-index: 1;
+  }
+  .show__hero__iframe {
+    z-index: 1;
+  }
+  .show::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(99, 99, 99, 0.326);
     z-index: 0;
   }
   .show__heading-tog {
     z-index: 1;
   }
-  .show__h3, .show__h1 {
-    padding-bottom: 1rem;
-  }
   .show__iframe {
     z-index: 1;
+  }
+  .show__h3, .show__h1 {
+    padding-bottom: 1rem;
   }
   .show__h3 {
     position: relative;
@@ -58,11 +74,301 @@ main {
     font-family: "Avenir Next Demi";
   }
   .shows {
-    padding: 0rem 1rem;
+    padding: 2rem 1rem;
   }
   .shows-h2 {
     font-family: "Avenir Next Demi";
     color: #323232;
     font-size: 1.6rem;
+  }
+  .shows__event {
+    padding: 1rem 0rem;
+    border-bottom: 2px solid rgba(189, 189, 189, 0.292);
+  }
+  .shows-title {
+    display: none;
+  }
+  .shows h4 {
+    display: none;
+  }
+  .shows p {
+    font-size: 0.8rem;
+    color: #AFAFAF;
+  }
+  .shows-venue, .shows--location {
+    font-size: 1rem;
+    color: black;
+  }
+  .shows--date {
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: "Avenir Next Demi";
+  }
+  .shows--button {
+    border: none;
+    background-color: #323232;
+    color: #FAFAFA;
+    height: 2.6rem;
+    width: 100%;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .show__hero {
+    position: relative;
+    background-image: url("/Assets/Images/hero-shows.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 2rem 2rem 2rem;
+    color: white;
+    height: 35rem;
+  }
+  .show__hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(99, 99, 99, 0.326);
+    z-index: 0;
+  }
+  .show__hero__heading-tog {
+    z-index: 1;
+  }
+  .show__hero__iframe {
+    z-index: 1;
+  }
+  .show::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(99, 99, 99, 0.326);
+    z-index: 0;
+  }
+  .show__heading-tog {
+    z-index: 1;
+  }
+  .show__iframe {
+    z-index: 1;
+  }
+  .show__h3 {
+    font-size: 1.5rem;
+    position: relative;
+    top: 5.5rem;
+    font-family: "Avenir Next Demi";
+  }
+  .show__h1 {
+    font-size: 3.8rem;
+    font-family: "Avenir Next Demi";
+    position: relative;
+    top: 3.5rem;
+  }
+  .show__iframe {
+    width: 55vw;
+    height: 9.5rem;
+    position: relative;
+    top: 3.5rem;
+  }
+  .shows {
+    padding: 2rem;
+  }
+  .shows-h2 {
+    font-size: 3rem;
+    font-family: "Avenir Next Demi";
+  }
+  .shows p {
+    display: none;
+  }
+  .shows-title {
+    display: flex;
+    padding: 0rem 1rem;
+  }
+  .shows--item {
+    display: flex;
+  }
+  .shows h4 {
+    font-size: 0.8rem;
+    color: #AFAFAF;
+  }
+  .shows--date-t, .shows--date {
+    width: 26vw;
+  }
+  .shows--date {
+    font-size: 0.9rem;
+    font-family: "Avenir Next Demi";
+  }
+  .shows-venue, .shows--location {
+    font-size: 0.9rem;
+  }
+  .shows-venue-t, .shows-venue, .shows--location {
+    width: 26vw;
+  }
+  .shows--location-t {
+    width: 48vw;
+  }
+  .shows--button {
+    width: 22vw;
+  }
+  .shows--button {
+    border: none;
+    height: 3rem;
+    background-color: #323232;
+    color: #FAFAFA;
+    font-size: 1rem;
+    font-weight: bolder;
+    border-radius: 0.2rem;
+  }
+  .shows__event {
+    display: flex;
+    padding: 1rem 1rem;
+    border-bottom: 2px solid rgba(189, 189, 189, 0.292);
+  }
+  .shows__event:active {
+    background-color: #AFAFAF;
+  }
+  .shows__event:hover {
+    background-color: #FAFAFA;
+  }
+}
+@media (min-width: 1280px) {
+  .show__hero {
+    position: relative;
+    background-image: url("/Assets/Images/hero-shows.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 7rem 2rem 7rem;
+    color: white;
+    height: 45rem;
+  }
+  .show__hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(99, 99, 99, 0.326);
+    z-index: 0;
+  }
+  .show__hero__heading-tog {
+    z-index: 1;
+  }
+  .show__hero__iframe {
+    z-index: 1;
+  }
+  .show::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(99, 99, 99, 0.326);
+    z-index: 0;
+  }
+  .show__heading-tog {
+    z-index: 1;
+  }
+  .show__iframe {
+    z-index: 1;
+  }
+  .show__h3 {
+    font-size: 1.6rem;
+    position: relative;
+    top: 3rem;
+    font-family: "Avenir Next Demi";
+  }
+  .show__h1 {
+    font-size: 4rem;
+    font-family: "Avenir Next Demi";
+    position: relative;
+    top: 1.3rem;
+    max-width: 42vw;
+  }
+  .show__h1 br {
+    display: none;
+  }
+  .show__iframe {
+    width: 35vw;
+    height: 9.5rem;
+    position: relative;
+    top: 3.5rem;
+  }
+  .shows {
+    padding: 2rem 7rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .shows--button {
+    width: 13vw;
+  }
+  .shows--button {
+    border: none;
+    height: 3rem;
+    background-color: #323232;
+    color: #FAFAFA;
+    font-size: 1rem;
+    font-weight: bolder;
+    border-radius: 0.2rem;
+  }
+  .shows--button:hover {
+    background-color: black;
+  }
+  .shows__event {
+    display: flex;
+    padding: 1rem 1rem;
+    border-bottom: 2px solid rgba(189, 189, 189, 0.292);
+    cursor: pointer;
+  }
+  .shows__event:active {
+    background-color: #AFAFAF;
+  }
+  .shows__event:hover {
+    background-color: #FAFAFA;
+  }
+  .shows-h2 {
+    font-size: 2.5rem;
+    font-family: "Avenir Next Demi";
+    color: #323232;
+    margin: 0;
+  }
+  .shows p {
+    display: none;
+  }
+  .shows-title {
+    display: flex;
+    padding: 0rem 1rem;
+  }
+  .shows--item {
+    display: flex;
+  }
+  .shows h4 {
+    font-size: 0.8rem;
+    color: #AFAFAF;
+  }
+  .shows--date-t, .shows--date {
+    width: 19vw;
+  }
+  .shows--date {
+    font-size: 0.9rem;
+    font-family: "Avenir Next Demi";
+  }
+  .shows-venue, .shows--location {
+    font-size: 0.9rem;
+  }
+  .shows-venue-t, .shows-venue, .shows--location {
+    width: 15vw;
   }
 }/*# sourceMappingURL=show.css.map */

@@ -1,10 +1,14 @@
 
 @import './partials/variables';
 @import './partials/typography';
+@import './partials/mixins';
 
+*{
+    
+    font-family: 'Avenir Next Regular', sans-serif;
+}
 body{
     margin: 0;
-    font-family: 'Avenir Next Regular', sans-serif;
 }
 
 // .form__avatar{
@@ -21,21 +25,11 @@ body{
 //header 
 .header {
     background-color: $primary_color_black;
-    
-    
-    &::after{
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        top: 5.5rem;
-        width: 50%;
-        height: 0.3rem;
-        background-color: $primary_color_white;
-    }
-
+      
 }
+@include headerUnderlineBiopageMobile;
+
+
 
 .header__nav {
     display: flex;
@@ -43,14 +37,10 @@ body{
     justify-content: center;
     align-items: center;
     
-   
-  
-
     &--img {
         width: 8rem;
         padding-top: 1rem;
     }
-
     &--list {
         width: 100%;
         list-style: none;
@@ -58,7 +48,6 @@ body{
         display: flex;
         justify-content: space-around;
         align-items: center;      
-        
     }
     
 
@@ -67,13 +56,7 @@ body{
         color: $secondary_color_white;
         font-size: 0.9rem;
         font-weight: 100;
-        position: relative;
-        
-        &.active{
-            color: $primary_color_white;
-            position: relative;
-           
-        }
+        position: relative;  
     }  
  }
 
@@ -95,9 +78,11 @@ body{
         display: flex;
         justify-content: space-between;
         width: 7rem;
+        cursor: pointer;
     }
     &__touch--logo--img{
         display: none;
+        cursor: pointer;
     }
 
     &__box{
@@ -128,7 +113,7 @@ body{
         background-image: url('/Assets/Images/hero-bio.jpg');
         background-size: cover;
         background-position: center;
-        height: 45vh;
+        height: 20rem;
         display: flex;
         align-items: center;
         padding: 0rem 1rem;
@@ -141,17 +126,8 @@ body{
            font-family: 'Avenir Next Demi', 'sans serif';
            z-index: 1;
         }
+        @include hero-overlay 
         
-    }
-    &__hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(61, 61, 61, 0.451);
-        z-index: 0;
     }
 
     //About Section
@@ -227,6 +203,14 @@ body{
 }
 
 // form section
+input:focus,
+textarea:focus {
+    outline: none; 
+    border: 1.5px solid black; 
+}
+button:focus{
+    background-color: black;
+}
 
 .comment {
     padding: 1rem;
@@ -251,7 +235,7 @@ body{
         display: flex;
         flex-direction: column;
         width: 100%;
-        
+
     }
     &__label{
         font-size: 0.8rem;
@@ -266,14 +250,14 @@ body{
         margin: 0.5rem 0rem;
         box-shadow: 0 2px 4px rgba(130, 130, 130, 0.063);
         background-color: $secondary_color_white;
+        text-indent: 0.5rem;
+       
     }
     &__input::placeholder{
         color: $primary_color_black;
         font-family: 'Avenir Next Regular';
-        position: relative;
-        left: 0.5rem;
         font-size: 0.9rem;
-        
+  
     }
     &__textarea{
         width: 100%;
@@ -283,14 +267,13 @@ body{
         margin: 0.5rem 0rem;
         box-shadow: 0 2px 4px rgba(130, 130, 130, 0.063);
         background-color: $secondary_color_white;
+        text-indent: 0.5rem;
+        padding-top: 0.5rem;
     }
     &__textarea::placeholder{
         color: $primary_color_black;
         font-family: 'Avenir Next Regular';
         font-size: 0.9rem;
-        position: absolute;
-        left: 0.5rem;
-        top: 0.5rem;
     }
     &__submit{
         width: 102%;
@@ -301,16 +284,20 @@ body{
         border-radius: 0.3rem;
         color: white;
         font-size: 1rem;
+        cursor: pointer;
+        &:hover{
+            background-color: #000000;
+        }
     }
-    
-
 }
 .card{
     display: flex;
     gap: 1rem;
-
-    border-top: 2px solid $secondary_color_gray;
+    border-top: 1.9px solid rgba(174, 174, 174, 0.383);
     padding: 1rem 0rem;
+    &:last-child{
+        border-bottom:1.9px solid rgba(174, 174, 174, 0.383);
+    }
     
     gap: 1rem;
     &__comments{
@@ -351,9 +338,10 @@ body{
     }
 }
 
-  
-    
 }
+
+    
+
 
     
 //styles for tablets
@@ -383,34 +371,15 @@ body{
         display: flex;
         gap: 3rem;
     }
-
-    &--link {
+    .header__nav--link{
         text-decoration: none;
         color: $secondary_color_white;
         font-size: 1rem;
-        
         position: relative;
-
-        &.active {
-            color: white;
-            position: relative;
-            font-weight: 700;
-        
-            &::after {
-                content: '';
-                display: block;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                top: 3rem;
-                width: 100%;
-                height: 0.4rem;
-                background-color: $primary_color_white;
-              
-            }
-        }
     }
 }
+
+@include headerUnderlineBiopageTabletNDesktop;
 
 
 //Footer
@@ -418,7 +387,7 @@ body{
 .footer{
     background-color: $primary_color_black;
     color: $secondary_color_white;
-    padding: 4rem;
+    padding: 2rem;
 
     &__touch--h1{
         font-family: 'Avenir Next Demi', 'sans serif';
@@ -434,6 +403,7 @@ body{
         display: flex;
         gap: 3.7rem;
         font-family: 'Avenir Next Regular';
+        width: 47.5vw;
     }
     &__touch-links{
         display: flex;
@@ -483,10 +453,12 @@ body{
             background-image: url('/Assets/Images/hero-bio.jpg');
             background-size: cover;
             background-position: center;
-            height: 50vh;
+            height: 35rem;
             display: flex;
             align-items: center;
             padding: 0rem 2.5rem;
+
+            @include hero-overlay;
     
             &--heading{
                margin: 0;
@@ -497,17 +469,6 @@ body{
             }
             
         }
-        &__hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: rgba(61, 61, 61, 0.457);
-            z-index: 0;
-        }
-    
         //About Section
         &__about{
             padding: 3rem 2.5rem;
@@ -601,6 +562,59 @@ body{
         }
     
     }
+    
+// form section
+
+input:focus,
+textarea:focus {
+    outline: none; 
+    border: 1.5px solid black; 
+}
+button:focus{
+    background-color: black;
+}
+.comment {
+    padding: 2.5rem;
+
+    &__form{
+        display: flex;
+        gap: 1rem;
+        padding: 0rem 3.5rem 1.5rem 3.5rem;
+    }
+     
+   @include comment-style-tableNdesktop;
+
+}
+.card{
+    display: flex;
+    gap: 1rem;
+    border-top: 1.9px solid rgba(174, 174, 174, 0.383);
+    margin: 1.5rem 3rem;
+    padding: 1rem 0rem;
+    gap: 1rem;
+    &:last-child{
+        border-bottom:1.9px solid rgba(174, 174, 174, 0.383);
+        padding-bottom: 1.5rem;
+    }
+
+    &__comment-text{
+        margin: 0;
+        width: 70vw;
+        font-size: 0.825rem;
+        line-height: 1.1rem;
+      
+    }
+    &__comment-meta{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70vw;
+    }
+   
+    @include card-style-tableNdesktop
+}
+
+  
       
  }
     
@@ -657,6 +671,7 @@ body{
         }
     }
 }
+@include headerUnderlineBiopageTabletNDesktop;
 //Footer
 
 .footer{
@@ -739,17 +754,9 @@ body{
                font-family: 'Avenir Next Demi', 'sans serif';
                z-index: 1;
             }
+
+            @include hero-overlay 
             
-        }
-        &__hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: rgba(61, 61, 61, 0.457);
-            z-index: 0;
         }
     
         //About Section
@@ -767,7 +774,7 @@ body{
             }
             &--image{
                 width: 100%;
-                height: 55vh;
+                
             }
             &--desc1{
                 padding: 0rem 5rem;
@@ -824,6 +831,10 @@ body{
         &__gallery{
             padding: 2rem 10rem;
             background-color: $secondary_color_white;
+
+            & img{
+                width: 100%;
+            }
     
             &--h2{
                 font-size: 2.5rem;
@@ -844,11 +855,57 @@ body{
         }
     
     }
-    
-    .main img{
-        width: 100%;
-    }  
-    
+         
+// form section
+input:focus,
+textarea:focus {
+    outline: none; 
+    border: 1.5px solid black; 
+}
+button:focus{
+    background-color: black;
+}
+.comment {
+    padding: 2.5rem 10rem;
+
+    &__form{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        padding: 0rem 15rem 1.5rem 15rem;
+        
+    }
+     
+   @include comment-style-tableNdesktop;
+
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    border-top: 0.12rem solid rgba(219, 219, 219, 0.508);
+    gap: 1rem;
+    margin: 0rem 14.5rem 1.5rem 14.5rem;
+
+
+    &__comment-meta{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 32vw;
+    }
+    &__comment-text{
+        margin: 0;
+        width: 32vw;
+        font-size: 0.825rem;
+        line-height: 1.1rem;
+      
+    }
+
+    @include card-style-tableNdesktop
+}
+
     
 }
     
