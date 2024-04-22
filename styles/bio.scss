@@ -10,27 +10,21 @@
 body{
     margin: 0;
 }
-
-// .form__avatar{
-//     width: 2.5rem;
-//     height: 2.5rem;
-//     border-radius: 50%;
-//     position: relative;
-//     top: 1.5rem;
-// }
-
+.error{
+    border-color: red;
+}
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 0.2rem;
+}
 @media (min-width: $mobile-min-width) and (max-width: $mobile-max-width){
-
-
 //header 
 .header {
     background-color: $primary_color_black;
       
 }
 @include headerUnderlineBiopageMobile;
-
-
-
 .header__nav {
     display: flex;
     flex-direction: column;
@@ -64,6 +58,7 @@ body{
 
 //Footer
 
+
 .footer{
     background-color: $primary_color_black;
     color: $secondary_color_white;
@@ -90,6 +85,7 @@ body{
         flex-direction: column;
         gap: 0.8rem;
         padding: 1.5rem 0rem 2.5rem 0rem;
+       
     }
     &__second--h3{
         font-family: 'Avenir Next Demi', 'sans serif';
@@ -98,12 +94,18 @@ body{
     &__second--p{
         font-size: 0.8rem;
     }
+
     &__copyright{
         font-size: 0.7rem;
     }
     &__logo--img{
         width: 36%;
     }
+    &__second--box a{
+       text-decoration: none;
+       color: $secondary_color_white;
+    }
+  
 }
 
 .main {
@@ -444,6 +446,10 @@ button:focus{
         display: none;
         width: 100%;
     }
+    &__second--box a{
+        text-decoration: none;
+        color: $secondary_color_white;
+     }
   
 }
     .main {
@@ -732,6 +738,10 @@ button:focus{
         display: none;
         width: 100%;
     }
+    &__second--box a{
+        text-decoration: none;
+        color: $secondary_color_white;
+     }
   
 }
 

@@ -6,6 +6,7 @@ main{
     height: auto;
 }
 
+
 @media (min-width: $mobile-min-width) and (max-width: $mobile-max-width){
 .show{
     // hero section    
@@ -46,6 +47,12 @@ main{
     &__event{
         padding: 1rem 0rem;
         border-bottom: 2px solid rgba(189, 189, 189, 0.292);
+        &:active{
+            background-color: $primary_color_silver;
+        }
+        &:hover{
+            background-color: $secondary_color_white;
+        }
     }
     &-title{
         display: none;
@@ -78,6 +85,9 @@ main{
         margin-top: 0.5rem;
     }
  }  
+ .selected{
+    background-color: #E1E1E1;
+}
 }
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width){
 .show{
@@ -132,13 +142,14 @@ main{
         display: flex;
         padding: 1rem 1rem;
         border-bottom: 2px solid rgba(189, 189, 189, 0.292);
-        &:active{
-            background-color: $primary_color_silver;
-        }
+        cursor: pointer;
         &:hover{
             background-color: $secondary_color_white;
         }
     }
+}
+.selected{
+    background-color: #E1E1E1;
 }
 }
 @media (min-width: $desktop-min-width) {
@@ -255,5 +266,7 @@ main{
             width: 15vw;
         }   
     }
-
+    .selected{
+        background-color: #E1E1E1;
+    }
 }

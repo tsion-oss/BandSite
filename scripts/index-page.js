@@ -78,10 +78,11 @@ function createElementWithClass(elementName, className) {
 //function for form section | submitting
 
 const form = document.querySelector('.comment__form')
+const input = document.querySelector('.comment__input')
+const textarea = document.querySelector('.comment__textarea')
 
 form.addEventListener('submit', (event) => {
   event.preventDefault()
-
     const time = Date.now()
 
     const date = new Date(time)

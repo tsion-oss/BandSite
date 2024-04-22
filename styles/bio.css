@@ -23,6 +23,16 @@ body {
   margin: 0;
 }
 
+.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 0.2rem;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
   .header {
     background-color: #323232;
@@ -113,6 +123,10 @@ body {
   }
   .footer__logo--img {
     width: 36%;
+  }
+  .footer__second--box a {
+    text-decoration: none;
+    color: #FAFAFA;
   }
   .main__hero {
     position: relative;
@@ -445,6 +459,10 @@ body {
   .footer__logo--img {
     display: none;
     width: 100%;
+  }
+  .footer__second--box a {
+    text-decoration: none;
+    color: #FAFAFA;
   }
   .main__hero {
     position: relative;
@@ -812,6 +830,10 @@ body {
   .footer__logo--img {
     display: none;
     width: 100%;
+  }
+  .footer__second--box a {
+    text-decoration: none;
+    color: #FAFAFA;
   }
   .main__hero {
     position: relative;
