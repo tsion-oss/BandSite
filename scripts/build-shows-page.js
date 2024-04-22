@@ -114,7 +114,6 @@ function createCardElement(show) {
   return cardElement
 
 }
-
 // Function to create an element with a specified class name 
 function createElementWithClass(elementName, className){
     const element = document.createElement(elementName)
@@ -124,7 +123,6 @@ function createElementWithClass(elementName, className){
 }
 
 //Function for show card: selected item
-
 const showsEvent = document.querySelectorAll('.shows__event')
 
 showsEvent.forEach(item => {
@@ -137,14 +135,3 @@ showsEvent.forEach(item => {
     item.classList.add('selected')
   })
 })
-
-//  <h2 class="shows-h2">Shows</h2>
-// <div class="shows__event">
-//       <p class="shows--date-t">DATE</p>
-//       <h3 class="shows--date">Mon Sept 09 2024</h3>
-//       <p class="shows--venue-t">VENUE</p>
-//       <h3 class="shows--venue">Ronald Lane</h3>
-//       <p class="shows--location-t">LOCATION</p>
-//       <h3 class="shows--location">San Francisco, CA</h3>
-//       <button class="shows--button">BUY TICKETS</button>
-// </div> 

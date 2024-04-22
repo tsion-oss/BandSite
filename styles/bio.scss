@@ -4,7 +4,6 @@
 @import './partials/mixins';
 
 *{
-    
     font-family: 'Avenir Next Regular', sans-serif;
 }
 body{
@@ -21,8 +20,7 @@ body{
 @media (min-width: $mobile-min-width) and (max-width: $mobile-max-width){
 //header 
 .header {
-    background-color: $primary_color_black;
-      
+    background-color: $primary_color_black;   
 }
 @include headerUnderlineBiopageMobile;
 .header__nav {
@@ -43,8 +41,6 @@ body{
         justify-content: space-around;
         align-items: center;      
     }
-    
-
     &--link {
         text-decoration: none;
         color: $secondary_color_white;
@@ -54,11 +50,7 @@ body{
     }  
  }
 
-
-
 //Footer
-
-
 .footer{
     background-color: $primary_color_black;
     color: $secondary_color_white;
@@ -79,7 +71,6 @@ body{
         display: none;
         cursor: pointer;
     }
-
     &__box{
         display: flex;
         flex-direction: column;
@@ -105,9 +96,7 @@ body{
        text-decoration: none;
        color: $secondary_color_white;
     }
-  
 }
-
 .main {
     //Hero Section
     &__hero{
@@ -120,7 +109,6 @@ body{
         align-items: center;
         padding: 0rem 1rem;
     
-
         &--heading{
            margin: 0;
            color: $primary_color_white;
@@ -136,8 +124,7 @@ body{
     &__about{
         padding: 2rem 1rem;
         background-color: $primary_color_white;
-    
-    
+
         &--image{
             width: 100%;
         }
@@ -173,17 +160,13 @@ body{
                 font-size: 0.8rem;
                 line-height: 1.5;
                 margin: 0;
-
-               
             }
             &--pad{
                 margin-bottom: 1.5rem;
             }
         }
     }
-
     //Gallery Section
-
     &__gallery{
         padding: 0rem 1rem;
         background-color: $secondary_color_white;
@@ -201,9 +184,7 @@ body{
             width: 100%;
         }
     }
-
 }
-
 // form section
 input:focus,
 textarea:focus {
@@ -213,7 +194,6 @@ textarea:focus {
 button:focus{
     background-color: black;
 }
-
 .comment {
     padding: 1rem;
      
@@ -300,7 +280,6 @@ button:focus{
     &:last-child{
         border-bottom:1.9px solid rgba(174, 174, 174, 0.383);
     }
-    
     gap: 1rem;
     &__comments{
         display: flex;
@@ -339,31 +318,20 @@ button:focus{
       color: $primary_color_black;
     }
 }
-
 }
 
-    
-
-
-    
 //styles for tablets
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
-
-
  //header 
 .header {
     background-color: $primary_color_black;
     padding: 0.9rem 2.5rem;
- 
-   
 }
-
 .header__nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1.1rem;
-
     &--img {
         width: 7rem;
     }
@@ -380,27 +348,20 @@ button:focus{
         position: relative;
     }
 }
-
 @include headerUnderlineBiopageTabletNDesktop;
-
-
 //Footer
-
 .footer{
     background-color: $primary_color_black;
     color: $secondary_color_white;
     padding: 2rem;
-
     &__touch--h1{
         font-family: 'Avenir Next Demi', 'sans serif';
         font-size: 1.8rem;
     }
-    
     &__touch{
         display: flex;
         justify-content: space-between;
     }
-   
     &__touch--div{
         display: flex;
         gap: 3.7rem;
@@ -411,7 +372,6 @@ button:focus{
         display: flex;
         gap: 1.5rem; 
     }
-   
     &__touch--logo--img{
         display: block;
         width: 8rem;
@@ -423,7 +383,6 @@ button:focus{
         justify-content: space-between;
         height: 4vh;
     }
-
     &__box{
         display: flex;
         justify-content: space-between;
@@ -450,7 +409,6 @@ button:focus{
         text-decoration: none;
         color: $secondary_color_white;
      }
-  
 }
     .main {
         //Hero Section
@@ -463,23 +421,19 @@ button:focus{
             display: flex;
             align-items: center;
             padding: 0rem 2.5rem;
-
             @include hero-overlay;
-    
             &--heading{
                margin: 0;
                color: $primary_color_white;
                font-size: 3.5rem;
                font-family: 'Avenir Next Demi', 'sans serif';
                z-index: 1;
-            }
-            
+            } 
         }
         //About Section
         &__about{
             padding: 3rem 2.5rem;
             background-color: $primary_color_white;
-        
             &--h2{
                 font-size: 2rem;
                 font-weight: bolder; 
@@ -517,8 +471,6 @@ button:focus{
                     overflow-wrap: break-word;
                     gap: 1.5rem;
                 }
-                
-    
                 &--h2{
                     font-size: 1.7rem;
                     font-weight: bolder;
@@ -530,22 +482,16 @@ button:focus{
                     margin: 0;
                     min-width: 18rem;
                     max-width: 30rem;
-                  
-    
-                   
                 }
                 &--pad{
                     margin-bottom: 1.5rem;
                 }
             }
         }
-    
         //Gallery Section
-    
         &__gallery{
             padding: 2rem 4rem;
             background-color: $secondary_color_white;
-    
             &-img{
                 width: 100%;
             }
@@ -562,15 +508,10 @@ button:focus{
                 grid-template-columns: repeat(3, 1fr);
                 gap: 1.5rem;
                 padding: 2rem 0rem;
-        
-            }
-           
+            } 
         }
-    
     }
-    
 // form section
-
 input:focus,
 textarea:focus {
     outline: none; 
@@ -587,9 +528,7 @@ button:focus{
         gap: 1rem;
         padding: 0rem 3.5rem 1.5rem 3.5rem;
     }
-     
    @include comment-style-tableNdesktop;
-
 }
 .card{
     display: flex;
@@ -602,13 +541,11 @@ button:focus{
         border-bottom:1.9px solid rgba(174, 174, 174, 0.383);
         padding-bottom: 1.5rem;
     }
-
     &__comment-text{
         margin: 0;
         width: 70vw;
         font-size: 0.825rem;
         line-height: 1.1rem;
-      
     }
     &__comment-meta{
         display: flex;
@@ -616,52 +553,38 @@ button:focus{
         align-items: center;
         width: 70vw;
     }
-   
     @include card-style-tableNdesktop
-}
-
-  
-      
+}   
  }
-    
 //styles for tablets
 @media (min-width: $desktop-min-width) {
  //header 
  .header {
     background-color: $primary_color_black;
     padding: 0.9rem 7rem;
- 
-   
 }
-
 .header__nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1.5rem;
-
     &--img {
         width: 7.5rem;
     }
-
     &--list {
         list-style: none;
         display: flex;
         gap: 3rem;
     }
-
     &--link {
         text-decoration: none;
         color: $secondary_color_white;
         font-size: 1rem;
-        
         position: relative;
-
         &.active {
             color: white;
             position: relative;
             font-weight: 700;
-        
             &::after {
                 content: '';
                 display: block;
@@ -672,29 +595,24 @@ button:focus{
                 width: 100%;
                 height: 0.4rem;
                 background-color: $primary_color_white;
-              
             }
         }
     }
 }
 @include headerUnderlineBiopageTabletNDesktop;
 //Footer
-
 .footer{
     background-color: $primary_color_black;
     color: $secondary_color_white;
     padding: 4rem 8rem;
-
     &__touch--h1{
         font-family: 'Avenir Next Demi', 'sans serif';
         font-size: 2.3rem;
     }
-    
     &__touch{
         display: flex;
         justify-content: space-between;
     }
-   
     &__touch--div{
         display: flex;
         gap: 5rem;
@@ -704,7 +622,6 @@ button:focus{
         display: flex;
         gap: 1.5rem; 
     }
-   
     &__touch--logo--img{
         display: block;
         width: 8rem;
@@ -716,7 +633,6 @@ button:focus{
         justify-content: space-between;
         height: 4vh;
     }
-
     &__box{
         display: flex;
         flex-direction: row;
@@ -742,9 +658,7 @@ button:focus{
         text-decoration: none;
         color: $secondary_color_white;
      }
-  
 }
-
     .main {
         //Hero Section
         &__hero{
@@ -764,16 +678,12 @@ button:focus{
                font-family: 'Avenir Next Demi', 'sans serif';
                z-index: 1;
             }
-
             @include hero-overlay 
-            
         }
-    
         //About Section
         &__about{
             padding: 3rem 8.5rem;
             background-color: $primary_color_white;
-        
             &--h2{
                 font-size: 2.5rem;
                 font-weight: bolder; 
@@ -784,7 +694,6 @@ button:focus{
             }
             &--image{
                 width: 100%;
-                
             }
             &--desc1{
                 padding: 0rem 5rem;
@@ -813,8 +722,6 @@ button:focus{
                     overflow-wrap: break-word;
                     gap: 1.5rem;
                 }
-                
-    
                 &--h2{
                     font-size: 1.7rem;
                     font-weight: bolder;
@@ -826,26 +733,19 @@ button:focus{
                     margin: 0;
                     min-width: 18rem;
                     max-width: 30rem;
-                  
-    
-                   
                 }
                 &--pad{
                     margin-bottom: 1.5rem;
                 }
             }
         }
-    
         //Gallery Section
-    
         &__gallery{
             padding: 2rem 10rem;
             background-color: $secondary_color_white;
-
             & img{
                 width: 100%;
             }
-    
             &--h2{
                 font-size: 2.5rem;
                 font-weight: bolder; 
@@ -859,13 +759,9 @@ button:focus{
                 grid-template-columns: repeat(3, 1fr);
                 gap: 1.5rem;
                 padding: 2rem 0rem;
-        
             }
-           
         }
-    
-    }
-         
+    } 
 // form section
 input:focus,
 textarea:focus {
@@ -877,17 +773,13 @@ button:focus{
 }
 .comment {
     padding: 2.5rem 10rem;
-
     &__form{
         display: flex;
         gap: 1rem;
         justify-content: center;
         padding: 0rem 15rem 1.5rem 15rem;
-        
     }
-     
    @include comment-style-tableNdesktop;
-
 }
 .card{
     display: flex;
@@ -897,8 +789,6 @@ button:focus{
     border-top: 0.12rem solid rgba(219, 219, 219, 0.508);
     gap: 1rem;
     margin: 0rem 14.5rem 1.5rem 14.5rem;
-
-
     &__comment-meta{
         display: flex;
         justify-content: space-between;
@@ -910,13 +800,9 @@ button:focus{
         width: 32vw;
         font-size: 0.825rem;
         line-height: 1.1rem;
-      
     }
-
     @include card-style-tableNdesktop
 }
-
-    
 }
     
 

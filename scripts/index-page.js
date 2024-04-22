@@ -17,7 +17,6 @@ const comments = [
     }
 ]
 
-
 const commentsList = document.querySelector('.comments-list')
 console.log(commentsList)
 
@@ -29,8 +28,6 @@ comments.forEach((comment) => {
  commentsList.appendChild(cardElement)
 
 })
-
-
 
 function createCardElement(comment) {
 
@@ -67,7 +64,6 @@ const cardElement = createElementWithClass('div', 'card')
   
 }
 
-
 function createElementWithClass(elementName, className) {
    const element = document.createElement(elementName)
    element.classList.add(className)
@@ -97,7 +93,6 @@ form.addEventListener('submit', (event) => {
 
     const formattedDate = `${formattedMonth}/${formattedDay}/${year}`
 
-   
     //Create a new comment object
     const newObject = {
       name: form.elements.name.value,
@@ -115,24 +110,10 @@ form.addEventListener('submit', (event) => {
     form.reset()   
 })
 
-//Function for the navbar link
-
-//Get the current page URL
-const currentPage = window.location.pathname
 
 
 
 
 
-//  <div class="card">
-// <img src="" alt="card__avatar" class="card__comments-avatar">
-// <div class="card__comment-content">
-//     <div class="card__comment-meta">
-//         <h3 class="card__comment--author">Victor Pinto</h3>
-//         <p class="card__comment-date">11/02/2023</p>
-//     </div>
-// <p class="card__comment-text">
-//         This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.</p>
-// </div>
-// </div> 
+
 
