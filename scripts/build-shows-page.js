@@ -123,6 +123,21 @@ function createElementWithClass(elementName, className){
     return element
 }
 
+//Function for show card: selected item
+
+const showsEvent = document.querySelectorAll('.shows__event')
+
+showsEvent.forEach(item => {
+  item.addEventListener('click', () => {
+
+    showsEvent.forEach(item => {
+      item.classList.remove('selected')
+    })
+
+    item.classList.add('selected')
+  })
+})
+
 //  <h2 class="shows-h2">Shows</h2>
 // <div class="shows__event">
 //       <p class="shows--date-t">DATE</p>
