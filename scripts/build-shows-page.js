@@ -1,58 +1,19 @@
-// Array of show objects
-const shows = [
-    {
-      venue: 'Ronald Lane',
-      date: 'Mon Sept 09 2024',
-      location: 'San Francisco, CA'
-
-    },
-    {
-       venue: 'Pier 3 East',
-       date: 'Tue Sept 17 2024',
-       location: 'San Francisco, CA'
-  
-    },
-    {
-        venue: 'View Lounge',
-        date: 'Sat Oct 12 2024',
-        location: 'San Francisco, CA'
-  
-    },
-    {
-        venue: 'Hyatt Agency',
-        date: 'Sat Nov 16 2024',
-        location: 'San Francisco, CA'
-  
-    },
-    {
-        venue: 'Moscow Center',
-        date: 'Fri Nov 29 2024',
-        location: 'San Francisco, CA'
-  
-    },
-    {
-        venue: 'Press Club',
-        date: 'Wed Dec 18 2024',
-        location: 'San Francisco, CA'
-    }
-]
-
-// Array of titles for the show details
-const titles = ['DATE', 'VENUE', 'LOCATION']
-
-//Reference to the container element wherer shows will be displayed
-const showsList = document.querySelector('.shows')
+import bandSiteApi from "./band-site-api.js"
 
 
+  // Array of titles for the show details
+  const titles = ['DATE', 'VENUE', 'LOCATION']
 
+  //Reference to the container element wherer shows will be displayed
+  const showsList = document.querySelector('.shows')
 
-//Heading for the list of shows
-const showTitle = createElementWithClass('h2', 'shows-h2')
-showTitle.innerText = 'Shows'
-showsList.appendChild(showTitle)
+  //Heading for the list of shows
+  const showTitle = createElementWithClass('h2', 'shows-h2')
+  showTitle.innerText = 'Shows'
+  showsList.appendChild(showTitle)
 
-const showsFirstDiv = createElementWithClass('div', 'shows__firstDiv')
-showsList.appendChild(showsFirstDiv)
+  const showsFirstDiv = createElementWithClass('div', 'shows__firstDiv')
+  showsList.appendChild(showsFirstDiv)
 
   //div only for tablet and desktop view
   const showsTitle = createElementWithClass('div', 'shows-title')
@@ -73,13 +34,29 @@ showsList.appendChild(showsFirstDiv)
   /////////////
 
 
-// Loop through each show object and create a card element for each
-shows.forEach((show) => {
- const cardElement = createCardElement(show)
- showsFirstDiv.appendChild(cardElement)
-})
+  //Get Shows method from bandsiteapi class
+  const shows = await bandSiteApi.getShows();
+  // console.log('Shows:', shows);
 
-function createCardElement(show) {
+  shows.forEach(show => {
+    show.date = formatDate(show.date)
+  })
+
+  // Loop through each show object and create a card element for each
+  shows.forEach((show) => {
+  const cardElement = createCardElement(show)
+  showsFirstDiv.appendChild(cardElement)
+  })
+
+  // Function to format timestamp to DD/MM/YYYY format
+  function formatDate(timestamp){
+    const date = new Date(timestamp);
+    const options = { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' };
+    return date.toLocaleDateString('en-US', options).replace(',', ''); 
+  }
+
+
+  function createCardElement(show) {
   //main div for the card
   const cardElement = createElementWithClass('div', 'shows__event')
 
@@ -96,7 +73,7 @@ function createCardElement(show) {
   cardElement.appendChild(showVenueTitle)
 
   const showVenue = createElementWithClass('h3', 'shows-venue')
-  showVenue.innerText = show.venue
+  showVenue.innerText = show.place
   cardElement.appendChild(showVenue)
 
   const showsLocationTitle = createElementWithClass('p', 'shows--location-t')
@@ -113,25 +90,24 @@ function createCardElement(show) {
 
   return cardElement
 
-}
-// Function to create an element with a specified class name 
-function createElementWithClass(elementName, className){
-    const element = document.createElement(elementName)
-    element.classList.add(className)
+  }
+  // Function to create an element with a specified class name 
+  function createElementWithClass(elementName, className){
+      const element = document.createElement(elementName)
+      element.classList.add(className)
 
-    return element
-}
+      return element
+  }
+  //Function for show card: selected item
+  const showsEvent = document.querySelectorAll('.shows__event')
 
-//Function for show card: selected item
-const showsEvent = document.querySelectorAll('.shows__event')
+  showsEvent.forEach(item => {
+    item.addEventListener('click', () => {
 
-showsEvent.forEach(item => {
-  item.addEventListener('click', () => {
+      showsEvent.forEach(item => {
+        item.classList.remove('selected')
+      })
 
-    showsEvent.forEach(item => {
-      item.classList.remove('selected')
+      item.classList.add('selected')
     })
-
-    item.classList.add('selected')
   })
-})
