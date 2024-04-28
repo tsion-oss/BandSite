@@ -16,10 +16,7 @@
         z-index: 1;
     }
 }
-
 @mixin comment-style-tableNdesktop{
-
-      
     &__join {
         font-family: 'Avenir Next Demi';
         color: $primary_color_black;
@@ -32,7 +29,6 @@
         position: relative;
         top: 1.5rem;
     }
-   
     &__box{
         display: flex;
         align-items: flex-start;
@@ -57,8 +53,6 @@
     &__input::placeholder{
         color: $primary_color_black;
         font-family: 'Avenir Next Regular';
-        
-        
     }
     &__textarea{
         width: 100%;
@@ -90,16 +84,13 @@
             background-color: black;
         }
     }
-
 }
-
 @mixin card-style-tableNdesktop{
     &__comments{
         display: flex;
         border-top: 2px solid $secondary_color_gray;
         gap: 1rem;
     }
-  
     &__comments-avatar{
         background-color: $secondary_color_gray;
         width: 2.5rem;
@@ -108,30 +99,24 @@
         border-radius: 50%;
         position: relative;
         top: 1.5rem;
-      
     }
     &__comment-date{
        color: $primary_color_silver;
        font-size: 0.9rem;
     }
-   
     &__comment--author{
       font-size: 0.9rem;
       font-family: 'Avenir Next Demi';
       color: $primary_color_black;
     }
 }
-
 @mixin shows-card-tabletNdesktop {
-    
-        
         &-h2{
             font-size: 3rem;
             font-family: 'Avenir Next Demi';
         }
         & p{
-            display: none;
-           
+            display: none;  
         }
         &-title{
            display: flex;
@@ -140,7 +125,6 @@
         &--item{
             display: flex;
         }
-     
         & h4{
             font-size: 0.8rem;
             color: $primary_color_silver;
@@ -156,7 +140,6 @@
         &-venue,
         &--location{
             font-size: 0.9rem;
-    
         }
         &-venue-t,
         &-venue,
@@ -169,7 +152,6 @@
         } 
 }
 @mixin headerUnderlineBiopageMobile{
- 
     .bio-page #main-header::after{
         right: auto;
         content: '';
@@ -195,7 +177,6 @@
             background-color: $primary_color_white;
 }
 }
-
 @mixin headerUnderlineBiopageTabletNDesktop{
     .bio-page .bio-link::after {
         content: '';
@@ -208,7 +189,6 @@
         height: 0.4rem;
         background-color: $primary_color_white;
     }
-    
     .show-page .show-link::after {
         content: '';
         display: block;

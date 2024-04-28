@@ -4,7 +4,6 @@ class BandSiteApi {
         this.baseUrl = `https://unit-2-project-api-25c1595833b2.herokuapp.com/`
     }
     async postComment(comment) { 
-        // console.log(comment)
         try{
            const response = await axios.post(`${this.baseUrl}comments?api_key=<${this.apiKey}>`, comment)
            return response.data

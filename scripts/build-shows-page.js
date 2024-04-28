@@ -1,18 +1,18 @@
 import bandSiteApi from "./band-site-api.js"
-// Array of titles for the show details
+
 const titles = ['DATE', 'VENUE', 'LOCATION']
-//Reference to the container element wherer shows will be displayed
+
 const showsList = document.querySelector('.shows')
-//Heading for the list of shows
+
 const showTitle = createElementWithClass('h2', 'shows-h2')
 showTitle.innerText = 'Shows'
 showsList.appendChild(showTitle)
 const showsFirstDiv = createElementWithClass('div', 'shows__firstDiv')
 showsList.appendChild(showsFirstDiv)
-//div only for tablet and desktop view
+
 const showsTitle = createElementWithClass('div', 'shows-title')
 showsFirstDiv.appendChild(showsTitle)
-//Elements for showTitle
+
 const showsDateT = createElementWithClass('h4', 'shows--date-t')
 showsDateT.innerText = titles[0]
 showsTitle.appendChild(showsDateT)
@@ -22,14 +22,13 @@ showsTitle.appendChild(showsVenueT)
 const showsLocationT = createElementWithClass('h4', 'shows--location-t')
 showsLocationT.innerText = titles[2]
 showsTitle.appendChild(showsLocationT)
-/////////////
+
 //Get Shows method from bandsiteapi class
 const shows = await bandSiteApi.getShows();
-// console.log('Shows:', shows);
 shows.forEach(show => {
     show.date = formatDate(show.date)
 })
-// Loop through each show object and create a card element for each
+
 shows.forEach((show) => {
   const cardElement = createCardElement(show)
   showsFirstDiv.appendChild(cardElement)
@@ -41,7 +40,7 @@ function formatDate(timestamp){
     return date.toLocaleDateString('en-US', options).replace(',', ''); 
 }
 function createCardElement(show) {
-    //main div for the card
+  
     const cardElement = createElementWithClass('div', 'shows__event')
 
     const showDateTitle = createElementWithClass('p', 'shows--date-t')

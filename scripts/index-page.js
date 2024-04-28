@@ -1,20 +1,16 @@
 import bandSiteApi from "./band-site-api.js";
-
 //Main box for the comments
 const commentsList = document.querySelector('.comments-list')
-    //Get comments method from bandsiteapi class
-    let comments = await bandSiteApi.getComments();
-   // Sort the comments array by timestamp in descending order (latest comment first)
-  comments.sort((a, b) => b.timestamp - a.timestamp);
-  comments.forEach(comment => {
-    comment.timestamp = formatDate(comment.timestamp);
-  });
-
-  comments.forEach(comment => {
+let comments = await bandSiteApi.getComments();
+comments.sort((a, b) => b.timestamp - a.timestamp);
+comments.forEach(comment => {
+  comment.timestamp = formatDate(comment.timestamp);
+});
+comments.forEach(comment => {
     // Create the main card div
     const cardElement = createCardElement(comment);
     commentsList.appendChild(cardElement);
-  });
+});
 // Function to format timestamp to DD/MM/YYYY format
 function formatDate(timestamp){
   const date = new Date(timestamp)
@@ -25,31 +21,31 @@ function formatDate(timestamp){
 }
 function createCardElement(comment) {
     const cardElement = createElementWithClass('div', 'card')
-    //Create img element that is inside the main card div
+  
     const imgElement = createElementWithClass('img', 'card__comments-avatar')
       cardElement.appendChild(imgElement)
     const cardCommentContent = createElementWithClass('div', 'card__comment-content')
       cardElement.appendChild(cardCommentContent)
-      // 
+
     const cardCommentMeta = createElementWithClass('div', 'card__comment-meta')
     cardCommentContent.appendChild(cardCommentMeta)
-    //
+  
     const cardCommentText = createElementWithClass('p', 'card__comment-text')
     cardCommentText.innerText = comment.comment
     cardCommentContent.appendChild(cardCommentText)
-    //Create a div for like and delete
+ 
     const likeNDeleteDiv = createElementWithClass('div', 'likeNdelete--div')
     cardCommentContent.appendChild(likeNDeleteDiv)
-    // delete element
+    
     const deleteElement = createElementWithClass('button', 'card__delete--el')
     deleteElement.setAttribute('data-comment-id', comment.id)
     deleteElement.innerText = 'Delete'
     likeNDeleteDiv.appendChild(deleteElement)
-    //creating h3 element that goes inside cardCommentMeta div
+  
     const cardCommentAuthor = createElementWithClass('h3', 'card__comment--author')
     cardCommentAuthor.innerText = comment.name
     cardCommentMeta.appendChild(cardCommentAuthor)
-    //Creating p element that goes inside cardCommentMeta div
+  
     const cardCommentDate = createElementWithClass('p', 'card__comment-date')
     cardCommentDate.innerText = comment.timestamp
     cardCommentMeta.appendChild(cardCommentDate)
@@ -61,11 +57,8 @@ function createCardElement(comment) {
 commentsList.addEventListener('click', async (event) => {
   if (event.target.classList.contains('card__delete--el')) {
     const commentId = event.target.getAttribute('data-comment-id')
-
     try {
       let deletedComments = await bandSiteApi.deleteComments(commentId)
-      // console.log(deletedComments);
-
       if (deletedComments){
          commentsList.innerHTML = ''
         
@@ -104,7 +97,6 @@ form.addEventListener('submit', async (event) => {
         //Post comment method from bandsiteapi class
         const commentResponse = await  bandSiteApi.postComment(newObject);
         console.log('Comment response:', commentResponse);
-
         comments = await bandSiteApi.getComments();
         comments.sort((a, b) => b.timestamp - a.timestamp);
         try{
