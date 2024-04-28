@@ -1,11 +1,12 @@
 import bandSiteApi from "./band-site-api.js";
-//Main box for the comments
+//Main box for the comments//
 const commentsList = document.querySelector('.comments-list')
 let comments = await bandSiteApi.getComments();
 comments.sort((a, b) => b.timestamp - a.timestamp);
 comments.forEach(comment => {
   comment.timestamp = formatDate(comment.timestamp);
 });
+
 comments.forEach(comment => {
     // Create the main card div
     const cardElement = createCardElement(comment);
