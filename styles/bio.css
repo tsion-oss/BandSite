@@ -33,6 +33,23 @@ body {
   margin-top: 0.2rem;
 }
 
+.likeNdelete--div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card__delete--el {
+  background-color: #323232;
+  color: #FAFAFA;
+  margin-top: 1rem;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+}
+
+textarea {
+  resize: none;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
   .header {
     background-color: #323232;
@@ -314,10 +331,10 @@ body {
   }
   .card {
     display: flex;
+    justify-content: center;
     gap: 1rem;
     border-top: 1.9px solid rgba(174, 174, 174, 0.383);
     padding: 1rem 0rem;
-    gap: 1rem;
   }
   .card:last-child {
     border-bottom: 1.9px solid rgba(174, 174, 174, 0.383);

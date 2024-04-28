@@ -1,5 +1,3 @@
-
-
 class BandSiteApi {
     constructor(apiKey) {
         this.apiKey = apiKey
@@ -44,5 +42,4 @@ class BandSiteApi {
         }
     }
 }
-
 export default new BandSiteApi(`e404f1cc-7cb2-4a28-8176-eda6fe932c33`)

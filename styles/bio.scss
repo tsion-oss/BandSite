@@ -17,6 +17,21 @@ body{
     font-size: 0.8em;
     margin-top: 0.2rem;
 }
+.likeNdelete--div{
+    display: flex;
+    justify-content: flex-end;
+}
+.card__delete--el{
+    background-color: $primary_color_black;
+    color: $secondary_color_white;
+    margin-top: 1rem;
+    border-radius: 0.2rem;
+    padding: 0.3rem;
+}
+textarea{
+    resize: none;
+}
+
 @media (min-width: $mobile-min-width) and (max-width: $mobile-max-width){
 //header 
 .header {
@@ -274,13 +289,13 @@ button:focus{
 }
 .card{
     display: flex;
+    justify-content: center;
     gap: 1rem;
     border-top: 1.9px solid rgba(174, 174, 174, 0.383);
     padding: 1rem 0rem;
     &:last-child{
         border-bottom:1.9px solid rgba(174, 174, 174, 0.383);
     }
-    gap: 1rem;
     &__comments{
         display: flex;
         border-top: 2px solid $secondary_color_gray;
@@ -317,6 +332,7 @@ button:focus{
       font-family: 'Avenir Next Demi';
       color: $primary_color_black;
     }
+    
 }
 }
 
