@@ -1,156 +1,150 @@
 @import './partials/variables';
 @import './partials/typography';
 @import './partials/mixins';
-
 main{
     height: auto;
 }
-
-
 @media (min-width: $mobile-min-width) and (max-width: $mobile-max-width){
-.show{
-    // hero section    
-    &__hero{
-        position: relative;
-        background-image: url('/Assets/Images/hero-shows.jpg');
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        padding: 0rem 1rem 2rem 1rem;
-        color: white;
-    
+    .show{
+        &__hero{
+            position: relative;
+            background-image: url('/Assets/Images/hero-shows.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            padding: 0rem 1rem 2rem 1rem;
+            color: white;
+            @include hero-overlay;
+        }
         @include hero-overlay;
-    }
-    @include hero-overlay;
-    &__h3,
-    &__h1{
-        padding-bottom: 1rem;  
-    }
-    &__h3{
-       position: relative;
-       top: 1.2rem;
-       font-size: 1rem;
-    }
-    &__h1{
-        font-family: 'Avenir Next Demi';
-    } 
-}
-//shows section
-.shows{
-    padding: 2rem 1rem;
-    &-h2{
-        font-family: 'Avenir Next Demi';
-        color: $primary_color_black;
-        font-size: 1.6rem;
-    }
-    &__event{
-        padding: 1rem 0rem;
-        border-bottom: 2px solid rgba(189, 189, 189, 0.292);
-        &:active{
-            background-color: $primary_color_silver;
+        &__h3,
+        &__h1{
+            padding-bottom: 1rem;  
         }
-        &:hover{
-            background-color: $secondary_color_white;
+        &__h3{
+        position: relative;
+        top: 1.2rem;
+        font-size: 1rem;
         }
+        &__h1{
+            font-family: 'Avenir Next Demi';
+        } 
     }
-    &-title{
-        display: none;
-    }
-    & h4{
-        display: none;
-    }
-    & p{
-        font-size: 0.8rem;
-        color: $primary_color_silver;
-    }
-    &-venue,
-    &--location{
-      font-size: 1rem;
-      color: black;
-    }
-    &--date{
+    .shows{
+        padding: 2rem 1rem;
+        &-h2{
+            font-family: 'Avenir Next Demi';
+            color: $primary_color_black;
+            font-size: 1.6rem;
+        }
+        &__event{
+            padding: 1rem 0rem;
+            border-bottom: 2px solid rgba(189, 189, 189, 0.292);
+            &:active{
+                background-color: $primary_color_silver;
+            }
+            &:hover{
+                background-color: $secondary_color_white;
+            }
+        }
+        &-title{
+            display: none;
+        }
+        & h4{
+            display: none;
+        }
+        & p{
+            font-size: 0.8rem;
+            color: $primary_color_silver;
+        }
+        &-venue,
+        &--location{
         font-size: 1rem;
-        font-weight: 800; 
-        font-family: 'Avenir Next Demi';
+        color: black;
+        }
+        &--date{
+            font-size: 1rem;
+            font-weight: 800; 
+            font-family: 'Avenir Next Demi';
+        }
+        &--button{
+            border: none;
+            background-color: $primary_color_black;
+            color: $secondary_color_white;
+            height: 2.6rem;
+            width: 100%;
+            border-radius: 0.2rem;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+    }  
+    .selected{
+        background-color: #E1E1E1;
     }
-    &--button{
-        border: none;
-        background-color: $primary_color_black;
-        color: $secondary_color_white;
-        height: 2.6rem;
-        width: 100%;
-        border-radius: 0.2rem;
-        font-size: 1rem;
-        margin-top: 0.5rem;
-    }
- }  
- .selected{
-    background-color: #E1E1E1;
-}
 }
 @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width){
-.show{
-    &__hero{
-        position: relative;
-        background-image: url('/Assets/Images/hero-shows.jpg');
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        padding: 0rem 2rem 2rem 2rem;
-        color: white;
-        height: 35rem;
+    .show{
+        &__hero{
+            position: relative;
+            background-image: url('/Assets/Images/hero-shows.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            padding: 0rem 2rem 2rem 2rem;
+            color: white;
+            height: 35rem;
+            @include hero-overlay;
+        }
         @include hero-overlay;
-    }
-    @include hero-overlay;
-    &__h3{
-        font-size: 1.5rem;
-        position: relative;
-        top: 5.5rem;
-        font-family: 'Avenir Next Demi';
-    }
-    &__h1{
-        font-size: 3.8rem;
-        font-family: 'Avenir Next Demi';
-        position: relative;
-        top: 3.5rem;
-    }
-    &__iframe{
-        width: 55vw;
-        height: 9.5rem;
-        position: relative;
-        top: 3.5rem;
-    }
-}
-.shows{
-    padding: 2rem;
-    @include shows-card-tabletNdesktop;
-    &--button{
-        width: 22vw;
-    }
-    &--button{
-        border: none;
-        height: 3rem;
-        background-color: $primary_color_black;
-        color: $secondary_color_white;
-        font-size: 1rem;
-        font-weight: bolder;
-        border-radius: 0.2rem;
-     } 
-     &__event{
-        display: flex;
-        padding: 1rem 1rem;
-        border-bottom: 2px solid rgba(189, 189, 189, 0.292);
-        cursor: pointer;
-        &:hover{
-            background-color: $secondary_color_white;
+        &__h3{
+            font-size: 1.5rem;
+            position: relative;
+            top: 5.5rem;
+            font-family: 'Avenir Next Demi';
+        }
+        &__h1{
+            font-size: 3.8rem;
+            font-family: 'Avenir Next Demi';
+            position: relative;
+            top: 3.5rem;
+        }
+        &__iframe{
+            width: 55vw;
+            height: 9.5rem;
+            position: relative;
+            top: 3.5rem;
         }
     }
-}
-.selected{
-    background-color: #E1E1E1;
-}
+    .shows{
+        padding: 2rem;
+        @include shows-card-tabletNdesktop;
+        &--button{
+            width: 22vw;
+        }
+        &--button{
+            border: none;
+            height: 3rem;
+            background-color: $primary_color_black;
+            color: $secondary_color_white;
+            font-size: 1rem;
+            font-weight: bolder;
+            border-radius: 0.2rem;
+        } 
+        &__event{
+            display: flex;
+            padding: 1rem 1rem;
+            border-bottom: 2px solid rgba(189, 189, 189, 0.292);
+            cursor: pointer;
+            &:hover{
+                background-color: $secondary_color_white;
+            }
+        }
+    }
+    .selected{
+        background-color: #E1E1E1;
+    }
 }
 @media (min-width: $desktop-min-width) {
     .show{
